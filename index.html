@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new-style.css">
+    <title>Roue Daily</title>
+</head>
+<body>
+    <h1>Daily Routine</h1>
+    <main>
+        <aside>
+            <button id="saveList" class="save-list">Sauvegarder la liste</button>
+            <ul class="list-collab" id="list-collab">
+            </ul>
+            <details>
+                <summary>Ajouter une personne</summary>
+                <form id="formulaire-collab">
+                    <label for="input-name">
+                        Prénom*
+                        <input name="input-name" id="input-name" type="text"/>
+                    </label>
+                    <label for="input-groupe">
+                        Groupe*
+                        <select name="input-groupe" id="input-groupe">
+                        </select>
+                        <!-- <input name="input-groupe" id="input-color" type="color"/> -->
+                    </label>
+                    <label for="input-avatar">
+                        Avatar
+                        <div class="container-input-file">
+                            <p>
+                                Télécharge un logo
+                            </p>
+                            <input name="input-avatar" id="input-avatar" type="file"
+                            accept="image/png, image/jpeg"/>
+                        </div>
+                    </label>
+                    <button id="submit-collab" type="submit">Ajouter</button>
+                </form>
+                <img id="visualizeAvatar"/>
+            </details>
+            
+            <details>
+                <summary>Ajouter un groupe</summary>
+                <div id="container-tag"  class="container-tag"></div>
+                <form id="formulaire-groupe" class="formulaire-groupe">
+                    <label for="input-name-groupe">
+                        Nom*
+                        <input name="input-name-groupe" id="input-name-groupe" type="text"/>
+                    </label>
+                    <label for="input-color">
+                        Couleur* 
+                        <input name="input-color" id="input-color" type="color"/>
+                    </label>
+                    <button id="submit-groupe" type="submit">Ajouter</button>
+                </form>
+            </details>
+        </aside>
+        <section class="main-container">
+            <button id="button-select">Go</button>
+            <ul id="main-list"></ul>
+        </section>
+    </main>
+</body>
+<script src="./script.js" type="module" ></script>
+</html>
